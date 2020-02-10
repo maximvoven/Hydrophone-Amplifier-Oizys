@@ -23,6 +23,7 @@ While the material distrubuted with the mit license I can not and do not take cr
 for the following files: HydrophoneAmpliferCircuit.sch, HydrophoneAmpliferCircuit.brd, README.md, BOM.ods,AmpV0.asc
 the files listed above are as a result of my work and are as a result covered under MIT License.
 
+Software Used: Eagle, LTSPICEXVII
 
 Revision History:
 V1.2
