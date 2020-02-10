@@ -1,0 +1,125 @@
+# Library script
+# 
+# Exported from C:/Users/Maxim Vovenko/Documents/EAGLE/libraries/SamacSys_Parts.lbr at 3/31/2019 9:11 PM
+# 
+# EAGLE Version 9.3.1 Copyright (c) 1988-2019 Autodesk, Inc.
+# 
+Set Wire_Bend 2;
+# Grid changed to 'mm' to avoid loss of precision!
+Grid mm;
+Layer   1 Top;
+Layer  16 Bottom;
+Layer  17 Pads;
+Layer  18 Vias;
+Layer  19 Unrouted;
+Layer  20 Dimension;
+Layer  21 tPlace;
+Layer  22 bPlace;
+Layer  23 tOrigins;
+Layer  24 bOrigins;
+Layer  25 tNames;
+Layer  26 bNames;
+Layer  27 tValues;
+Layer  28 bValues;
+Layer  29 tStop;
+Layer  30 bStop;
+Layer  31 tCream;
+Layer  32 bCream;
+Layer  33 tFinish;
+Layer  34 bFinish;
+Layer  35 tGlue;
+Layer  36 bGlue;
+Layer  37 tTest;
+Layer  38 bTest;
+Layer  39 tKeepout;
+Layer  40 bKeepout;
+Layer  41 tRestrict;
+Layer  42 bRestrict;
+Layer  43 vRestrict;
+Layer  44 Drills;
+Layer  45 Holes;
+Layer  46 Milling;
+Layer  47 Measures;
+Layer  48 Document;
+Layer  49 Reference;
+Layer  51 tDocu;
+Layer  52 bDocu;
+Layer  90 Modules;
+Layer  91 Nets;
+Layer  92 Busses;
+Layer  93 Pins;
+Layer  94 Symbols;
+Layer  95 Names;
+Layer  96 Values;
+Layer  97 Info;
+Layer  98 Guide;
+Description '\
+<b>https://componentsearchengine.com</b><p>\n\
+<author>Created by SamacSys</author>';
+
+Edit '44914-0201.sym';
+Layer 94;
+Change Style continuous;
+Wire  0.254 (5.08 2.54) (15.24 2.54);
+Wire  0.254 (15.24 -5.08) (15.24 2.54);
+Wire  0.254 (15.24 -5.08) (5.08 -5.08);
+Wire  0.254 (5.08 2.54) (5.08 -5.08);
+Layer 95;
+Change Size 1.778;
+Change Ratio 8;
+Change Align center left;
+Change Font proportional;
+Text '>NAME' R0 (16.51 7.62);
+Layer 96;
+Change Size 1.778;
+Change Align center left;
+Text '>VALUE' R0 (16.51 5.08);
+Pin '1' io none middle R0 both 0 (0 0);
+Pin '3' io none middle R0 both 0 (0 -2.54);
+Pin '2' io none middle R180 both 0 (20.32 0);
+Pin '4' io none middle R180 both 0 (20.32 -2.54);
+
+Edit '449140201.pac';
+Description '\
+<b>44914-0201</b><br>\n\
+';
+Change Drill 1.1;Pad '1' round 1.65 R0 (0 -1.215);
+Change Drill 1.1;Pad '2' round 1.65 R0 (0 1.785);
+Change Drill 1.1;Pad '3' round 1.65 R0 (-3 2.725);
+Change Drill 1.1;Pad '4' round 1.65 R0 (3 2.725);
+Layer 25;
+Change Size 1.27;
+Change Align center;
+Text '>NAME' R0 (0 0);
+Layer 27;
+Change Size 1.27;
+Change Align center;
+Text '>VALUE' R0 (0 0);
+Layer 51;
+Wire  0.2 (-3.325 3.685) (3.325 3.685) (3.325 -3.685) (-3.325 -3.685) \
+      (-3.325 3.685);
+Wire  0.1 (-4.825 4.685) (4.825 4.685) (4.825 -4.685) (-4.825 -4.685) \
+      (-4.825 4.685);
+Layer 21;
+Wire  0.1 (-3.325 1.315) (-3.325 -3.685) (3.325 -3.685) (3.325 1.315);
+Wire  0.1 (-3.325 3.685) (3.325 3.685);
+
+Edit '44914-0201.dev';
+Prefix 'J';
+Description '\
+<b>Headers & Wire Housings 2CKT VERT HEADER CPI PRESSFIT DR</b><p>\n\
+Source: <a href="https://componentsearchengine.com/Datasheets/1/44914-0201.pdf"> Datasheet </a>';
+Value off;
+Add 44914-0201 'G$1' next 0 (0 0);
+Package '449140201' '';
+Technology '';
+Technology '';
+Attribute DESCRIPTION 'Headers & Wire Housings 2CKT VERT HEADER CPI PRESSFIT DR' variable;
+Attribute HEIGHT '9mm' variable;
+Attribute MANUFACTURER_PART_NUMBER '44914-0201' variable;
+Attribute MANUFACTURER_NAME 'Molex' variable;
+Attribute MOUSER_PART_NUMBER '538-44914-0201' variable;
+Attribute MOUSER_PRICE-STOCK 'https://www.mouser.com/Search/Refine.aspx?Keyword=538-44914-0201' variable;
+Connect  'G$1.1' '1'  'G$1.2' '2'  'G$1.3' '3'  'G$1.4' '4';
+Grid inch;
+Edit ;

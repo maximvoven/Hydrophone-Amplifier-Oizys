@@ -1,0 +1,117 @@
+*AD8676_A SPICE Macro-model Typical Values at Vs=±15V
+* Description: Amplifier
+* Generic Desc: 10/30V, BIP, OP, Low Noise, RRO, 1X
+* Developed by: RM, ADSiV apps
+* Revision History: 08/10/2012 - Updated to new header style
+* 1.01 (05/2007)
+* Copyright 2007, 2012 by Analog Devices
+*
+* Refer to http://www.analog.com/Analog_Root/static/techSupport/designTools/spiceModels/license/spice_general.html for License Statement.  Use of this model
+* indicates your acceptance of the terms and provisions in the License Statement.
+*
+* BEGIN Notes:
+*
+* Not Modeled:
+*    
+* Parameters modeled include:
+*
+* END Notes
+*
+* Node Assignments
+*		        noninverting input
+*	            	|	inverting input
+*		        |	|	positive supply
+*		        |	|	|	negative supply
+*		        |	|	|	|	output
+*		        |	|	|	|	|
+*		        |	|	|	|	|
+.SUBCKT AD8676_A	1 	2 	99 	50 	45 
+*
+*INPUT STAGE
+*
+Q1   15  7 5 NIX
+Q2   6  2 5 NIX
+*RE1 501 5 1.731E+03
+*RE2 502 5 1.731E+03
+IOS  1  2 500E-12
+I1  5 50 1E-03
+V5 5 9 0.3
+D9 50 9 Dx
+EOS  7  1 POLY(4) (14,98) (73,98) (81,98) (70,98)  10E-6 1 1 1 1
+RC1  15 11 6E3
+RC2  6  11 6E3
+V6 10 11 0.3
+D10 99 10 Dx
+C1   6  15 2.3E-13
+* CMRR=130dB
+*
+ECM   13 98 POLY(2) (1,98) (2,98) 0 0.0074 0.0074
+RCM1  13 14 1.59E2
+RCM2  14 98 2.27E-3
+CCM1  13 14 1E-6
+*
+* PSRR=135dB
+*
+RPS3 72 73 1.59E+2
+RPS4 73 98 5E-5
+CPS3 72 73 1E-6
+EPSY 98 72 POLY(1) (99,50) 0 0.56234
+*
+* VOLTAGE NOISE REFERENCE OF 2.8nV/rt(Hz)
+*
+VN1 80 98 0
+RN1 80 98 16.45E-3
+HN  81 98 VN1 2.6
+RN2 81 98 1
+*flicker noise 
+*
+D5 69 98 DNOISE
+VSN 69 98 DC 0.6551
+H1 70 98 VSN 12
+RN 70 98 1
+*
+* INTERNAL VOLTAGE REFERENCE
+*
+EREF 98  0 POLY(2) (99,0) (50,0) 0 .5 .5
+GSY  99 50  (99,50) 27E-6  
+*
+* POLE AT 20MHz, ZERO AT 60MHz
+*
+G1 98 21 (15,6) 5.84E-6
+R1 21 98 200E3
+R2 21 22 85E3
+C2 22 98 40E-15
+D3  21 99 DX
+D4  50 21 DX
+*
+* GAIN STAGE
+*
+G2  98 25 (21,98) 2E-5
+R5  25 98 1.64E+10
+CF  45 25 3E-11
+EVP  97 98 (99,50) 0.5
+D6  32 97 DX
+V3   32 25 0.3
+EVN  51 98 (50,99) 0.5
+D7   51 33 DX
+V4   25 33 0.3
+*
+* OUTPUT STAGE
+*
+Q3   45	41 99 QOP 1
+Q4   45	43 50 QON 1
+EG1  99 40 POLY(1) (98,25) 0.68515  1
+EG2  42 50 POLY(1) (25,98) 0.68515  1
+RB1  40 41 5000
+RB2  42 43 200
+*
+* MODELS
+*
+.MODEL NIX NPN (BF=71429,IS=1E-15)
+.MODEL QOP PNP (BF=200,VA=200,IS=1E-15,RC=260)
+.MODEL QON NPN (BF=200,VA=200,IS=1E-15,RC=50)
+.MODEL DC D(IS=130E-15)
+.MODEL DX D(IS=1E-16,CJO=1E-16)
+.MODEL DNOISE D(IS=1E-16,RS=0,KF=1E-14)
+*
+.ENDS AD8676_A
