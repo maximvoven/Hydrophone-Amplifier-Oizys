@@ -1,11 +1,11 @@
-Project OizysAMP
+# Project OizysAMP
 
-Designer: Maxim Vovenko
+**Designer**: Maxim Vovenko
 
-Warning:
+## Warning:
 This was designed in High School for a club called AVBotz, this work predates my studies of EE at San Jose State University. Reuse Design at your own peral, Im not responsible for anything that happens or gurentee this works. This is only stored for historical record.
 
-Description:
+## Description:
 This is the Hydrophone Amplifier Code name "Oizys". The code name reflects the absord amount of time 
 figuring out how to make the amplifier and the amount of rivisions that have been trashed. This is the 
 First version of the amplifer wich has been designed based on reasearch and simulations run in LTSpice
@@ -25,9 +25,10 @@ While the material distrubuted with the mit license I can not and do not take cr
 for the following files: HydrophoneAmpliferCircuit.sch, HydrophoneAmpliferCircuit.brd, README.md, BOM.ods,AmpV0.asc
 the files listed above are as a result of my work and are as a result covered under MIT License.
 
-Software Used: Eagle, LTSPICEXVII
+## Software Used: 
+Eagle, LTSPICEXVII
 
-Known Issues:
+## Known Issues:
 -Design is suboptimal, the stages for amplification and signal conditioning should be reversed to prevent clipping
 -Power Supply instantly fails under _any_ transient voltage spikes.
 -Improper Crimping may result in damage to power supply due to no reverse polarity protection being present and software engineers not being able to decode wire coloring.
@@ -35,7 +36,7 @@ Known Issues:
 -Gain calculations may be off by factor of 10, recalculation required (Symptoms: Signal observed to be in 10mv range instead of 1v).
 
 
-Revision History:
+## Revision History:
 V1.2
 -Updated License
 -OpenSourced with MIT License
@@ -85,7 +86,7 @@ Initial Incomplete design
 -Missing trim pot for tuning amp circuit
 -Testpoints were added to faciilitate diagnostics.
 
-Copyright (c) 2020 Maxim Vovenko
+**Copyright (c) 2020 Maxim Vovenko**
 
 Software is hereby defined to be any and all digital files needed to produce a 
 physical copy of the design as described by these digital files as well as any
