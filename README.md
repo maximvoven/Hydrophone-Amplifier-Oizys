@@ -1,7 +1,9 @@
 Project OizysAMP
 
-Head Engineer: Maxim Vovenko
-Board Designer's: Maxim Vovenko
+Designer: Maxim Vovenko
+
+Warning:
+This was designed in High School for a club called AVBotz, this work predates my studies of EE at San Jose State University. Reuse Design at your own peral, Im not responsible for anything that happens or gurentee this works. This is only stored for historical record.
 
 Description:
 This is the Hydrophone Amplifier Code name "Oizys". The code name reflects the absord amount of time 
