@@ -77,8 +77,9 @@ Initial Incomplete design
 
 Copyright (c) 2020 Maxim Vovenko
 
-Software is hereby stated to be any and all digital files needed to produce a 
-physical product as described by these digital files.
+Software is hereby defined to be any and all digital files needed to produce a 
+physical copy of the design as described by these digital files as well as any
+physical designs produced utilizing the original files.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
