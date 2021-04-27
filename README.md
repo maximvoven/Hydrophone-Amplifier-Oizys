@@ -25,6 +25,14 @@ the files listed above are as a result of my work and are as a result covered un
 
 Software Used: Eagle, LTSPICEXVII
 
+Known Issues:
+-Design is suboptimal, the stages for amplification and signal conditioning should be reversed to prevent clipping
+-Power Supply instantly fails under _any_ transient voltage spikes.
+-Improper Crimping may result in damage to power supply due to no reverse polarity protection being present and software engineers not being able to decode wire coloring.
+-The reference voltage is coupled to the signal producing artifacts in the signal, this needs to be decoupled.
+-Gain calculations may be off by factor of 10, recalculation required (Symptoms: Signal observed to be in 10mv range instead of 1v).
+
+
 Revision History:
 V1.2
 -Updated License
